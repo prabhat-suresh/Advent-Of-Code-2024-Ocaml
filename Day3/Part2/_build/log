@@ -1,0 +1,6 @@
+# dune init proj Part2
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /home/prabhat/.cache/dune/db
+# Workspace root: /home/prabhat/Advent-Of-Code-2024-Ocaml/Day3/Part2
+# Auto-detected concurrency: 12
