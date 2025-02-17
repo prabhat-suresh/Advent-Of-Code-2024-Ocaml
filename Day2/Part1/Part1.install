@@ -1,8 +1,0 @@
-lib: [
-  "_build/install/default/lib/Part1/META"
-  "_build/install/default/lib/Part1/dune-package"
-  "_build/install/default/lib/Part1/opam"
-]
-bin: [
-  "_build/install/default/bin/Part1"
-]

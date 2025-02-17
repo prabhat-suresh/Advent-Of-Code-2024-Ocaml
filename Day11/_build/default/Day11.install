@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/Day11/META"
+  "_build/install/default/lib/Day11/dune-package"
+  "_build/install/default/lib/Day11/opam"
+]
+bin: [
+  "_build/install/default/bin/Day11"
+]

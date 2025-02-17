@@ -1,0 +1,16 @@
+# dune exec Day09
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /home/prabhat/.cache/dune/db
+# Workspace root: /home/prabhat/Ocaml/Advent-Of-Code-2024-Ocaml/Day09
+# Auto-detected concurrency: 12
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /run/current-system/sw/bin/ocamlc.opt -config > /tmp/dune_ebee1d_output

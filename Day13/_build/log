@@ -1,0 +1,24 @@
+# dune build --release
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /home/prabhat/.cache/dune/db
+# Workspace root: /home/prabhat/Ocaml/Advent-Of-Code-2024-Ocaml/Day13
+# Auto-detected concurrency: 12
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Release
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /run/current-system/sw/bin/ocamlc.opt -config > /tmp/dune_dd6ce4_output
+# Promoting "_build/default/Day13.opam" to "Day13.opam"
+$ (cd _build/default && /run/current-system/sw/bin/ocamlc.opt -w -40 -w -49 -nopervasives -nostdlib -g -bin-annot -bin-annot-occurrences -I lib/.Day13.objs/byte -no-alias-deps -o lib/.Day13.objs/byte/day13.cmo -c -impl lib/day13.ml-gen)
+$ (cd _build/default && /run/current-system/sw/bin/ocamlc.opt -w -40 -g -bin-annot -bin-annot-occurrences -I bin/.main.eobjs/byte -I lib/.Day13.objs/byte -no-alias-deps -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /run/current-system/sw/bin/ocamlopt.opt -w -40 -w -49 -nopervasives -nostdlib -g -I lib/.Day13.objs/byte -I lib/.Day13.objs/native -intf-suffix .ml-gen -no-alias-deps -o lib/.Day13.objs/native/day13.cmx -c -impl lib/day13.ml-gen)
+$ (cd _build/default && /run/current-system/sw/bin/ocamlopt.opt -w -40 -g -a -o lib/Day13.cmxa lib/.Day13.objs/native/day13.cmx)
+$ (cd _build/default && /run/current-system/sw/bin/ocamlopt.opt -w -40 -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.Day13.objs/byte -I lib/.Day13.objs/native -intf-suffix .ml -no-alias-deps -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /run/current-system/sw/bin/ocamlopt.opt -w -40 -g -o bin/main.exe lib/Day13.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+# Promoting "_build/default/Day13.install" to "Day13.install"

@@ -1,0 +1,45 @@
+let input = open_in "input.txt"
+
+let map =
+  let dyn = Dynarray.create () in
+  let rec input_helper () =
+    try
+      let s = input_line input in
+      let arr = Array.make (String.length s) '.' in
+      Array.iteri (fun i _ -> arr.(i) <- s.[i]) arr;
+      Dynarray.add_last dyn arr;
+      input_helper ()
+    with End_of_file -> dyn
+  in
+  input_helper ()
+
+let num_rows = Dynarray.length map
+let num_cols = Array.length (Dynarray.get map 0)
+let matrix (i, j) = (Dynarray.get map i).(j)
+
+let guard_pos =
+  let pos = ref (0, 0) in
+  for i = 0 to num_rows - 1 do
+    for j = 0 to num_cols - 1 do
+      if matrix(i,j) = '^' then pos := (i, j)
+    done
+  done;
+  pos
+
+type direction = Left | Right | Up | Down
+
+let rec move direction pos acc =
+  match direction with
+  | Left -> (match pos.(0) with
+        0 -> acc
+        | i -> let pos' = (i - 1, pos.(1)) in if matrix pos' = '#' then move Up pos acc else move Left pos' (pos :: acc))
+        | Right -> (match pos.(0) with
+                | num_cols -1 -> acc
+                | i -> let pos' = (i + 1, pos.(1)) in if matrix pos' = '#' then move Down pos acc else move Right pos' (pos :: acc))
+        | Up -> (match pos.(1) with
+                | 0 -> acc
+                | j -> let pos' = (pos.(0), j - 1) in if matrix pos' = '#' then move Left pos acc else move Up pos' (pos :: acc))
+        | Down -> (match pos.(1) with
+                | num_cols -1 -> acc
+                | j -> let pos' = (pos.(0), j + 1) in if matrix pos' = '#' then move Right pos acc else move Down pos' (pos :: acc))
+
